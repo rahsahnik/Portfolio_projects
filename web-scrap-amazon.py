@@ -60,7 +60,7 @@ for page in range(1,11):
     resp=req(page)
     soup=BeautifulSoup(resp.content, 'html.parser')
     product_name=soup.find_all('div',{'data-component-type':'s-search-result'})
-    for item in product_names:
+    for item in product_name:
         record=scrap_items(item)
         if record:
             records.append(record)
